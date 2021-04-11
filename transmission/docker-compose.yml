@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  transmission:
+    image: linuxserver/transmission:version-3.00-r2
+    container_name: transmission
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Rome
+      - USER=${USER}
+      - PASS=${PASSWORD}
+    volumes:
+      - /home/pi/transmission-config:/config
+      - /media/STORAGE:/downloads
+    ports:
+      - 9091:9091/tcp
+      - 51413:51413/tcp
+      - 51413:51413/udp
+    restart: unless-stopped
