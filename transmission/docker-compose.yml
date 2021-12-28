@@ -8,11 +8,12 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Rome
-      - USER=${USER}
+      - USER=${USERNANE}
       - PASS=${PASSWORD}
     volumes:
       - /home/pi/transmission-config:/config
-      - /media/STORAGE:/downloads
+      - /media/pi/FAST:/downloads/complete
+      - /media/pi/FAST/incomplete:/downloads/incomplete
     ports:
       - 9091:9091/tcp
       - 51413:51413/tcp
