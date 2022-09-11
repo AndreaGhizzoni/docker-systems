@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  filebrowser:
+    container_name: filebrowser
+    image: filebrowser/filebrowser
+    hostname: filebrowser
+    ports: 
+      - "8080:80"
+    volumes:
+      - /media/pi/FAST:/srv
+      # - /home/pi/docker/filebrowser/database.db:/database.db
+      # - /home/pi/docker/filebrowser/.filebrowser.json:/.filebrowser.json
+    # user: "1000:1000"
+    # restart: unless-stopped
