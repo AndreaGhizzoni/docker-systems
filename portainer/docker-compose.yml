@@ -6,7 +6,7 @@ volumes:
 services:
   portainer:
     container_name: portainer
-    image: portainer/portainer-ce:2.15.0-alpine
+    image: portainer/portainer-ce:2.18.4-alpine
     ports:
       - 8000:8000
       - 9000:9000
